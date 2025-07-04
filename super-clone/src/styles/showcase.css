@@ -1,0 +1,304 @@
+/* General Body and Container Styles - Largely same as template.css */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.showcase-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Hero Section Styles - Largely same as template.css, with button adjustments */
+.hero-section {
+  text-align: left;
+  margin-bottom: 60px; /* More space below hero section */
+  padding-top: 50px;
+}
+
+.hero-breadcrumb {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px; /* Space between title and buttons */
+  max-width: 800px;
+  color: #222;
+}
+
+.hero-buttons {
+  display: flex; /* Arrange buttons side-by-side */
+  gap: 15px; /* Space between buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.cta-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.cta-button.primary {
+  background-color: #222; /* Dark button */
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background-color: #000;
+}
+
+.cta-button.secondary {
+  background-color: transparent; /* Transparent button */
+  color: #555;
+  border: 1px solid #ccc; /* Light border */
+}
+
+.cta-button.secondary:hover {
+  background-color: #f0f0f0;
+  border-color: #b0b0b0;
+  color: #222;
+}
+
+/* Customer Success Stories Section */
+.customer-stories-section {
+  margin-bottom: 80px; /* Space below this section */
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 40px; /* Space below section title */
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid for cards */
+  gap: 30px; /* Space between cards */
+}
+
+.story-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden; /* Ensures image corners are rounded with the card */
+  display: flex;
+  flex-direction: column; /* Stack image, then content */
+}
+
+.card-image-placeholder {
+  width: 100%;
+  padding-bottom: 60%; /* Aspect ratio for the image area (e.g., 5:3) */
+  background-size: cover;
+  background-position: center;
+  /* These will be replaced by actual images */
+}
+
+/* Specific background colors for placeholders based on the image */
+.card-image-placeholder.pink {
+    background-color: #FFE6EE; /* Example pink */
+    /* Add background-image: url('path/to/punch-drunk-screenshot.jpg'); */
+}
+.card-image-placeholder.yellow {
+    background-color: #FFFBE6; /* Example yellow */
+    /* Add background-image: url('path/to/fairness-foundation-screenshot.jpg'); */
+}
+.card-image-placeholder.teal {
+    background-color: #E6FAFA; /* Example teal */
+    /* Add background-image: url('path/to/roxana-screenshot.jpg'); */
+}
+
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left within the card */
+}
+
+.profile-image-placeholder {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  border-radius: 50%; /* Circular profile image */
+  background-color: #ccc; /* Placeholder color */
+  border: 2px solid white; /* White border as seen in the image */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: -40px; /* Pull it up over the image, adjust as needed */
+  margin-bottom: 15px; /* Space below profile image */
+  background-image: url('https://via.placeholder.com/50x50/cccccc/ffffff?text=P'); /* Example placeholder */
+  background-size: cover;
+}
+
+.profile-image-placeholder.two-profiles {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto; /* Allow content to define width */
+    height: auto;
+    background: none; /* Remove single placeholder background */
+}
+
+.profile-img-left, .profile-img-right {
+    width: 40px; /* Slightly smaller for overlap */
+    height: 40px;
+    border-radius: 50%;
+    background-color: #bbb; /* Placeholder color */
+    border: 2px solid white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background-size: cover;
+}
+
+.profile-img-left {
+    background-image: url('https://via.placeholder.com/40x40/aaaaaa/ffffff?text=R'); /* Example */
+    z-index: 2; /* Bring forward */
+}
+
+.profile-img-right {
+    background-image: url('https://via.placeholder.com/40x40/999999/ffffff?text=N'); /* Example */
+    margin-left: -15px; /* Overlap effect */
+    z-index: 1;
+}
+
+
+.card-title {
+  font-size: 19px; /* Slightly larger title for the cards */
+  font-weight: 600;
+  line-height: 1.4;
+  color: #222;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* "Made with Super" footer element */
+.made-with-super {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 1000; /* Ensure it's above other content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+}
+
+/* If there's an icon within "Made with Super", you'd style it here */
+/* .made-with-super::before {
+    content: '⭐'; // Example icon or use a font icon
+    margin-right: 8px;
+} */
+
+
+/* Right sidebar icons (if needed) - similar to the "Templates" page */
+/* You would need to add these icons in your JSX as well */
+/*
+.right-sidebar-icons {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 999;
+}
+.right-sidebar-icon {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.right-sidebar-icon:hover {
+    background-color: #f0f0f0;
+}
+*/
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 40px;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+  .hero-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px;
+  }
+  .cta-button {
+    width: 100%; /* Full width buttons */
+  }
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .stories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .showcase-container {
+    padding: 30px 15px;
+  }
+  .profile-image-placeholder {
+    width: 45px;
+    height: 45px;
+    margin-top: -35px;
+  }
+  .profile-image-placeholder.two-profiles .profile-img-left,
+  .profile-image-placeholder.two-profiles .profile-img-right {
+    width: 35px;
+    height: 35px;
+    margin-left: -12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 28px;
+  }
+  .hero-breadcrumb {
+    font-size: 14px;
+  }
+  .stories-grid {
+    grid-template-columns: 1fr; /* Single column on smallest screens */
+  }
+  .made-with-super {
+    bottom: 10px;
+    left: 10px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

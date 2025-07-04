@@ -1,0 +1,269 @@
+/* General container for the features section */
+.features-section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+/* Header for the features section */
+.features-header {
+    text-align: left;
+    margin-bottom: 60px;
+    padding-top: 50px;
+}
+
+.features-breadcrumb {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.features-main-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+/* Features Grid Layout */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Individual Feature Card */
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px;
+  border-radius: 8px;
+  cursor: pointer; /* Indicate it's clickable */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add hover effects */
+}
+
+.feature-card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+.feature-icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #333;
+  line-height: 1;
+}
+
+.feature-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* "View all features" link card */
+.feature-card.view-all {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 25px;
+  min-height: 100px;
+  /* Ensure this card still looks clickable, but its action is different */
+  cursor: pointer; /* Still clickable, but for navigation */
+  background-color: #f9f9f9; /* Slightly different background for distinction */
+  border: 1px solid #eee;
+}
+
+.feature-card.view-all:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.view-all-link {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.view-all-link:hover {
+  color: #0056b3;
+}
+
+.view-all-arrow {
+  font-size: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.view-all-link:hover .view-all-arrow {
+  transform: translateX(5px);
+}
+
+/* --- Styles for the Feature Detail View --- */
+.feature-detail-view {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  margin-top: 30px; /* Space from top */
+}
+
+.back-button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #555;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 30px; /* Space below the button */
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #f0f0f0;
+  border-color: #b0b0b0;
+  color: #222;
+}
+
+.detail-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.detail-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.detail-content ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.detail-content ul li {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px; /* Space for custom bullet */
+}
+
+.detail-content ul li::before {
+  content: '✓'; /* Custom checkmark bullet */
+  color: #007bff; /* Checkmark color */
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+
+/* Responsive adjustments for Feature Detail View */
+@media (max-width: 768px) {
+  .feature-detail-view {
+    padding: 30px;
+  }
+  .detail-content h2 {
+    font-size: 28px;
+  }
+  .detail-content p, .detail-content ul li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-detail-view {
+    padding: 20px;
+  }
+  .detail-content h2 {
+    font-size: 24px;
+  }
+  .detail-content p, .detail-content ul li {
+    font-size: 15px;
+  }
+}
+
+/* Existing Responsive adjustments for grid - keep these as well */
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding: 15px;
+  }
+  .feature-card {
+    padding: 20px;
+  }
+  .feature-title {
+    font-size: 18px;
+  }
+  .feature-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+    .features-main-title {
+        font-size: 36px;
+    }
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+  }
+  .features-section-container {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+    .features-main-title {
+        font-size: 28px;
+    }
+    .features-breadcrumb {
+        font-size: 14px;
+    }
+    .feature-icon {
+        font-size: 30px;
+    }
+    .feature-title {
+        font-size: 17px;
+    }
+    .feature-description {
+        font-size: 14px;
+    }
+    .view-all-link {
+        font-size: 16px;
+    }
+    .view-all-arrow {
+        font-size: 20px;
+    }
+}

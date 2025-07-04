@@ -1,0 +1,184 @@
+/* General Body and Container Styles - Consistent with previous sections */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+.guides-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Guides Hero Section Styles */
+.guides-hero-section {
+  text-align: left;
+  margin-bottom: 60px;
+  padding-top: 50px;
+}
+
+.guides-breadcrumb {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.guides-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  max-width: 800px;
+  color: #222;
+}
+
+.guides-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+/* Guides Content Area */
+.guides-content-area {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Individual Guide Section */
+.guide-section {
+  margin-bottom: 60px;
+}
+
+.guide-section:last-child {
+  margin-bottom: 0;
+}
+
+.guide-number-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.guide-number {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+/* Guide Color Boxes Grid (New/Modified) */
+.guide-color-boxes-grid { /* Changed class name */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.guide-color-box { /* Changed class name */
+  /* This creates a fixed aspect ratio for the boxes */
+  width: 100%;
+  padding-bottom: 66.66%; /* 3:2 aspect ratio (e.g., if width is 300, height is 200) */
+  position: relative; /* For centering content if any */
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  display: flex; /* To center content */
+  justify-content: center; /* To center content */
+  align-items: center; /* To center content */
+  color: white; /* Text color inside the box */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.guide-color-box p {
+  margin: 0; /* Remove default paragraph margin */
+}
+
+
+/* "Made with Super" footer element - consistent styling */
+.made-with-super {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .guides-title {
+    font-size: 40px;
+  }
+  .guide-number-title {
+    font-size: 28px;
+  }
+  .guide-color-boxes-grid { /* Changed class name */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .guide-color-box { /* Changed class name */
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .guides-title {
+    font-size: 36px;
+  }
+  .guides-description {
+    font-size: 16px;
+  }
+  .guides-content-area {
+    padding: 15px;
+  }
+  .guide-number-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .guides-container {
+    padding: 30px 15px;
+  }
+  .guide-color-boxes-grid { /* Changed class name */
+    grid-template-columns: 1fr;
+  }
+  .guide-section {
+    margin-bottom: 40px;
+  }
+  .guide-color-box { /* Changed class name */
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .guides-title {
+    font-size: 28px;
+  }
+  .guides-breadcrumb {
+    font-size: 14px;
+  }
+  .guides-description {
+    font-size: 15px;
+  }
+  .made-with-super {
+    bottom: 10px;
+    left: 10px;
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
